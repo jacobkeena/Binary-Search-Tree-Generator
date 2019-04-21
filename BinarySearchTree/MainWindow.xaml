@@ -7,6 +7,36 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
-    </Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="20*" />
+      <RowDefinition Height="20*" />
+      <RowDefinition Height="20*" />
+      <RowDefinition Height="20*" />
+      <RowDefinition Height="20*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+
+    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+      <TextBlock Text="Binary Search Tree Generator" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" />
+    </StackPanel>
+    <WrapPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="10">
+      <TextBlock Text="Enter the amount of random numbers you want to insert as well as the upper and lower range to select from. Once typed, press the generate button!" TextWrapping="Wrap" FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" />
+      <Label Content="Amount:" Margin="5,0,0,0"/>
+      <TextBox Name="numberAmount" Width="60" Height="22" Margin="0,0,10,0"/>
+      <Label Margin="5,0,0,0" Content="Lower:" />
+      <TextBox Name="minBox" Width="30" Height="22" />
+      <Label Margin="5,0,0,0" Content="Upper:" />
+      <TextBox Name="maxBox" Width="30" Height="22" />
+      <Button Content="Generate" Height="22" Width="70" Click="GenerateNumbers_Clicked" Margin="5,0,0,0"/>
+    </WrapPanel>
+    <WrapPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="10">
+      <TextBlock Name="successMessage" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap"/>
+    </WrapPanel>
+    <TextBox IsReadOnly="True" Margin="15" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Name="displayBSTBox" TextWrapping="Wrap"/>
+
+
+  </Grid>
 </Window>
